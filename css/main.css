@@ -185,10 +185,52 @@
         font-weight: 700;
     }
 
-    p {
+    p, li {
         font-family: "ff-tisa-web-pro", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-size: 32px;
     }
+
+    form {
+        margin-bottom: 20px; 
+    }
+    
+    input[type="email"] {
+        border: 1px solid #ccc;
+        padding: 6px 4px;
+        outline: none;
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        font: 20px "ff-tisa-web-pro", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        color: #777;
+        margin: 0 auto;
+        max-width: 100%;
+        display: block;
+        background: #fff; }
+    
+    input[type="email"]:focus {
+        border: 1px solid #aaa;
+        color: #444;
+        -moz-box-shadow: 0 0 3px rgba(0,0,0,.2);
+        -webkit-box-shadow: 0 0 3px rgba(0,0,0,.2);
+        box-shadow:  0 0 3px rgba(0,0,0,.2); }
+    
+    textarea {
+        min-height: 60px; }
+    
+    label,
+    legend {
+        display: block;
+        font-weight: bold;
+        font-size: 13px;  }
+    select {
+        width: 220px; }
+    input[type="checkbox"] {
+        display: inline; }
+    label span,
+    legend span {
+        font-weight: normal;
+        font-size: 13px;
+        color: #444; }
 
 /* ======================== Helpers ======================== */
 
@@ -209,6 +251,7 @@ section {
 section.site-header {
     background: url('http://f.cl.ly/items/2N1W1F0F2P3T0i2c2k1n/Untitled-1.png') no-repeat top center fixed;
     height: 600px;
+    margin: 0;
 }
 
 .site-header h1, .site-header p {
@@ -219,19 +262,31 @@ section.site-header {
     margin-bottom: 10px;
 }
 
+.site-header p {
+    font-size: 32px;
+}
+
 section.nav-bar {
-    border-bottom: 1px black;
-    height: 90px;
+    border-bottom: solid 1px #eee;
+    height: 70px;
+    text-align: center;
+    background-color: white;
+    z-index: 100;
+    width: 100%;
+    position: absolute;
 }
 
 .nav-bar ul li {
     list-style: none;
-    padding-right: 20px;
+    padding: 25px 50px;
     display: inline-block;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 section.main-content {
-
+    padding-top: 101px;
 }
 
 .main-content .row img, .main-content .row div {
@@ -239,18 +294,7 @@ section.main-content {
 }
 
 section.newsletter {
-
-}
-
-.newsletter .container .two-thirds.column {
     text-align: center;
-    position: relative;
-    margin: 0 auto;
-}
-
-.newsletter .row {
-    position: relative;
-    margin: 0 auto;
 }
 
 section.full-video {
