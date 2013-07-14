@@ -8,21 +8,21 @@
 </head>
 <body>
     <section class="site-header">
-        <div class="container clearfix">
-            <div class="one-half column">
-                <h1>Kending</h1>
-                <p>Taiwanese Street Food</p>
-            </div>
-            <img class="one-half column" src="css/img/polaroid-template.png" alt="polaroid">
-        </div>
+        <!-- <div class="container"> -->
+            <h1>KENDING</h1>
+            <p>Taiwanese Food</p>
+            <img class="play-button" alt="Play" src="css/img/button.png">
+            <button class="close-video">x</button>
+            <iframe class="intro-video" src="http://player.vimeo.com/video/69515828?autoplay=1&amp;player_id=vimeoplayer&amp;api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+        <!-- </div> -->
     </section>
     <section class="nav-bar">
         <nav class="container">
             <ul class="nav-items">
-                <li section="site-header">Home</li>
-                <li section="main-content">The Food</li>
-                <li section="newsletter">Newsletter</li>
-                <li section="about-us">About Us</li>
+                <li section="site-header" class="nav-link"><a href="#site-header">Home</a></li>
+                <li section="main-content" class="nav-link"><a href="#main-content">The Food</a></li>
+                <li section="newsletter" class="nav-link"><a href="#newsletter">Newsletter</a></li>
+                <li section="about-us" class="nav-link"><a href="#about-us">About Us</a></li>
             </ul>
         </nav>
     </section>
@@ -54,25 +54,26 @@
             </div>
         </div>
     </section>
+    <section class="site-footer">
+
+    </section>
     <section class="newsletter">
         <div class="container">
-                <h1>
-                    Newsletter
-                </h1>
-                <form action="#" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate">
-                <input name="EMAIL" type="email" placeholder="email address">
-                <button class="search_submit" type="submit"><span class="first-type">Sign Up!</span></button>
-            </form>
+            <h1>
+                Newsletter
+            </h1>
+            <form id="newsletter-signup" action="?action=signup" method="post">  
+                <fieldset>  
+                    <label for="signup-email">Sign up for email offers, news & events:</label>  
+                    <input type="text" name="signup-email" id="signup-email" />  
+                    <input type="submit" id="signup-button" value="Sign Me Up!" />  
+                    <p id="signup-response"></p>  
+                </fieldset>  
+            </form>  
         </div>
     </section>
-    <section class="full-video">
-
-    </section>
-    <section class="footer">
-
-    </section>
-
     <script type="text/javascript" src="js/libs/jquery-2.0.3.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.anystretch.js"></script>
 </body>
 </html>

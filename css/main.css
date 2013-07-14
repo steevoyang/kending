@@ -249,16 +249,15 @@ section {
 }
 
 section.site-header {
-    background: url('http://f.cl.ly/items/2N1W1F0F2P3T0i2c2k1n/Untitled-1.png') no-repeat top center fixed;
-    height: 600px;
-    margin: 0;
+    /*background: url('http://f.cl.ly/items/2N1W1F0F2P3T0i2c2k1n/Untitled-1.png') no-repeat top center fixed;*/
+    text-align: center;
 }
 
 .site-header h1, .site-header p {
     position: relative;
-    top: 200px;
     color: #fff;
     line-height: 100%;
+    top: 150px;
     margin-bottom: 10px;
 }
 
@@ -266,14 +265,59 @@ section.site-header {
     font-size: 32px;
 }
 
+.site-header img {
+    position: relative;
+    top: 175px;
+    margin: 0 auto;
+}
+
+.play-button {
+    opacity: .80;
+    cursor: pointer;
+}
+
+.play-button:hover {
+    opacity: 1;
+
+}
+
+.intro-video {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+}
+
+.video-is-visible .intro-video {
+    opacity: 1;
+    z-index: 5000;
+}
+
+.close-video {
+    border: 2px solid #fff;
+    border-radius: 100%;
+    color: #fff;
+    line-height: 1.3;
+    padding: 0 5px;
+    position: absolute;
+    right: 50px;
+    top: 15px;
+    z-index: 10000;
+    opacity: 0;
+}
+
 section.nav-bar {
-    border-bottom: solid 1px #eee;
     height: 70px;
     text-align: center;
     background-color: white;
     z-index: 100;
     width: 100%;
     position: absolute;
+    -webkit-box-shadow: 0 1px 1px rgba(6,8,8,0.1);
 }
 
 .nav-bar ul li {
@@ -285,107 +329,54 @@ section.nav-bar {
     cursor: pointer;
 }
 
+.nav-bar a {
+    text-decoration: none;
+}
+
+.nav-bar a:link, .nav-bar a:visited{
+    color: #444;
+}
+
+/*.nav-bar a:hover {
+    color: #21AE98;
+}*/
+
+.nav-link:hover {
+    background-color: #f9f9f9;
+}
+
+.nav-link:hover a {
+    color: #21AE98;
+}
+
+.nav-link a:active {
+    color: #21AE98;
+}
+
 section.main-content {
     padding-top: 101px;
+    padding-bottom: 30px;
+    margin-bottom: 0;
+    background-color: #eaeae5;
 }
 
 .main-content .row img, .main-content .row div {
     float: left;
 }
 
+section.full-video .vimeoplayer{
+    width: 100%;
+    height: 630px;
+}
+
 section.newsletter {
     text-align: center;
 }
 
-section.full-video {
 
-}
 
 section.site-footer {
-
+    background: url('img/man-fishing.jpg') no-repeat top center fixed;
+    background-size: cover;
+    height: 550px;
 }
-
-
-
-/*#fixed-site-header {
-    position: fixed;
-    z-index: 99;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 90px;
-}
-
-#fixed-site-header img {
-    float: left;
-    position: absolute;
-    left: 14.5%;
-}
-
-#site-nav ul {
-    list-style: none;
-    display: inline-block;
-}
-
-#site-nav ul li {
-    float: left;
-}
-
-#site-header {
-    position: fixed;
-    width: 100%;
-    top: 35px;
-    text-align: center;
-    font-size: 52px;
-    font-weight: bold;
-    line-height: 50px;
-    z-index: 1;
-    letter-spacing: -0.05em;
-}
-
-#menu {
-    background: #ffffff;
-    border: 10px dashed;
-    z-index: 2;
-}
-
-.menu-items {
-    width: 960px;
-    margin: 0 auto;
-}
-
-#menu-item-1 {
-    float: left;
-}
-
-#menu-item-2 {
-    float: left;
-}
-
-#menu-item-3 {
-    float: left;
-}
-
-#find-us {
-    width: 960px;
-    margin: 0 auto;
-    background: blue;
-}
-
-#find-us h1 {
-	text-align: center;
-	font-weight: bold;
-	font-size: 64px;
-	margin-bottom: 30px;
-}
-
-#about {
-    background: url('http://f.cl.ly/items/0U3m2g0q0W0E2z2m0939/photo-1.JPG') no-repeat top center fixed;
-    width: 100%;
-    height: 600px;
-    -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-*/
