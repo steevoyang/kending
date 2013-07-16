@@ -46,8 +46,9 @@ $(document).ready(function() {
 		console.log('click');
 		e.preventDefault();
 		html.addClass("video-is-visible");
-		video.attr('src', 'http://player.vimeo.com/video/69515828?autoplay=1&amp;player_id=vimeoplayer&amp;api=1');
+		video.attr('src', 'http://player.vimeo.com/video/70332615?autoplay=1&amp;player_id=vimeoplayer&amp;api=1');
 		$('.intro-video').css('min-height', minHeight);
+		$('.close-video').css('opacity', minHeight);
     });
 
     // Hide the video
@@ -57,61 +58,5 @@ $(document).ready(function() {
 	    video.attr("src", "");
     });
 
-	// Newsletter Signup
-	$('#newsletter-signup').submit(function() {
 
-		//setup variables
-		var form = $(this),
-		formData = form.serialize(),
-		formUrl = form.attr('action'),
-		formMethod = form.attr('method'),
-		responseMsg = $('#signup-response')
-
-		//show response message - waiting
-		responseMsg.hide()  
-           .addClass('response-waiting')  
-           .text('Please Wait...')  
-           .fadeIn(200);  
-
-    	//send data to server
-    	$.ajax({
-    		url: formUrl,
-    		type: formMethod,
-    		data: formData,
-    		success:function(data){
-    			
-    			//setup variables
-    			var responseData = jQuery.parseJSON(data),
-    				klass = '';
-
-    			//response conditional
-    			switch(responseData.status){
-    				case 'error':
-    					klass = 'response-error';
-    				break;
-    				case 'success':
-    					klass ='response-success';
-    				break;
-    			}
-
-    			//show response message
-    			responseMsg.fadeOut(200,function(){  
-				    $(this).removeClass('response-waiting')  
-				           .addClass(klass)  
-				           .text(responseData.message)  
-				           .fadeIn(200,function(){  
-				               //set timeout to hide response message  
-				               setTimeout(function(){  
-				                   responseMsg.fadeOut(200,function(){  
-				                       $(this).removeClass(klass);  
-				                   });  
-				               },3000)  
-				            })  
-				})  
-    		}
-    	})
-
-		//prevent form from submitting
-		return false;
-	});
 });

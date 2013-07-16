@@ -28,7 +28,13 @@
     </section>
     <section class="main-content">
         <div class="container">
-            <div class="row clearfix">
+            <div class="row">
+                <img alt="Renbing" src="css/img/burrito.jpg">
+            </div>
+            <div class="row">
+                <img alt="Popcorn Chicken" src="css/img/chicken.jpg">
+            </div>
+            <!-- <div class="row clearfix">
                 <img class="one-half column" src="http://whitmans.vaesite.net/__data/097de330be2bf78b06d9697c948c4160.jpg" alt="food">
                 <div class="one-half column">
                     <p>
@@ -51,7 +57,7 @@
                         Have knowledge to share? Posting a Skillshare class is easy. You can create your very own local, in-person workshop or apply to teach a global, online class.
                     </p>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
     <section class="site-footer">
@@ -59,21 +65,25 @@
     </section>
     <section class="newsletter">
         <div class="container">
-            <h1>
-                Newsletter
-            </h1>
-            <form id="newsletter-signup" action="?action=signup" method="post">  
-                <fieldset>  
-                    <label for="signup-email">Sign up for email offers, news & events:</label>  
-                    <input type="text" name="signup-email" id="signup-email" />  
-                    <input type="submit" id="signup-button" value="Sign Me Up!" />  
-                    <p id="signup-response"></p>  
-                </fieldset>  
-            </form>  
+            <p id="description">Monthly news and updates plus discounts on all our products.</p>
+            <form id="signup" action="<?=$_SERVER['PHP_SELF']; ?>" method="get">
+                <fieldset>
+                    <legend>Join Our Mailing List</legend>
+                    <label for="email" id="address-label">Email Address
+                        <span id="response">
+                            <? require_once('inc/store-address.php'); if($_GET['submit']){ echo storeAddress(); } ?>
+                        </span>
+                    </label>
+                    <input type="text" name="email" id="email" />
+                    <input type="image" src="css/img/join.jpg" name="submit" value="Join" class="btn" alt="Join" />
+                    <div id="no-spam">We'll never spam or give this address away</div>
+                </fieldset>
+            </form>        
         </div>
     </section>
     <script type="text/javascript" src="js/libs/jquery-2.0.3.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/plugins/jquery.anystretch.js"></script>
+    <script type="text/javascript" src="js/plugins/mailing-list.js"></script>
 </body>
 </html>
