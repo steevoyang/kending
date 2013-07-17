@@ -10,64 +10,81 @@
 <body>
     <section class="site-header">
         <a id="site-header">
-        <h1>KENDING</h1>
-        <p>Taiwanese Street Food</p>
-        <img class="play-button" alt="Play" src="css/img/button.png">
-        <button class="close-video">x</button>
-        <iframe class="intro-video" src="http://player.vimeo.com/video/69515828?autoplay=1&amp;player_id=vimeoplayer&amp;api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+        <div class="container">
+            <div class="container-inner">
+                <h1>KENDING</h1>
+                <p>Taiwanese Street Food</p>
+                <img class="play-button" alt="Play" src="css/img/button.png">
+            </div>
+        </div>
+                <button class="close-video">x</button>
+                <iframe class="intro-video" src="http://player.vimeo.com/video/69515828?autoplay=1&amp;player_id=vimeoplayer&amp;api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
     </section>
     <section class="nav-bar">
-        <nav class="container">
-            <ul class="nav-items">
-                <li section="site-header" class="nav-link active"><a href="#site-header">Home</a></li>
-                <li section="main-content" class="nav-link"><a href="#main-content">The Food</a></li>
-                <li section="newsletter" class="nav-link"><a href="#newsletter">Newsletter</a></li>
-                <!-- <li section="about-us" class="nav-link"><a href="#about-us">About Us</a></li> -->
-            </ul>
-        </nav>
+        <div class="container">
+            <div class="container-inner">
+                <ul class="nav-items">
+                    <li section="site-header" class="nav-link active"><a href="#site-header">Home</a></li>
+                    <li section="main-content" class="nav-link"><a href="#main-content">The Food</a></li>
+                    <li section="newsletter" class="nav-link"><a href="#newsletter">Newsletter</a></li>
+                    <!-- <li section="about-us" class="nav-link"><a href="#about-us">About Us</a></li> -->
+                </ul>
+            </div>
+        </div>
     </section>
     <section class="main-content">
         <a id="main-content">
         <div class="container">
-            <div class="row">
-                <img alt="Renbing" src="css/img/burrito.jpg">
-            </div>
-            <div class="row">
-                <img alt="Popcorn Chicken" src="css/img/chicken.jpg">
-                <p>hello world</p>
+            <div class="container-inner">
+                <div class="row">
+                    <img alt="Renbing" src="css/img/burrito.jpg">
+                    <h1>Taiwanese Burrito</h1>
+                    <p>Ingredients: Tapioca Flour, Cabbage, Minced Pork, Cilantro, Crushed Peanuts, Bean Sprouts, Sauted Carrots</p>
+                </div>
+                <div class="row">
+                    <img alt="Popcorn Chicken" src="css/img/chicken.jpg">
+                    <h1>Popcorn Chicken</h1>
+                    <p>Ingredients: Chicken Thigh, Basil</p>
+                </div>
             </div>
         </div>
     </section>
     <section class="newsletter">
         <a id="newsletter">
-        <div class="container newsletter-form">
-            <form id="signup" action="<?=$_SERVER['PHP_SELF']; ?>" method="get">
-                <fieldset>
-                    <legend>Join Our Mailing List</legend>
-                        <span id="response">
-                            <? require_once('inc/store-address.php'); if($_GET['submit']){ echo storeAddress(); } ?>
-                        </span>
-                    <input type="text" name="email" id="email" placeholder="dirknowitzki@mavs.com" />
-                    <input type="image" src="css/img/join.jpg" name="submit" value="Join" class="btn" alt="Join" />
-                </fieldset>
-            </form>
-        </div>  
+        <div class="container-inner">   
+            <div class="container newsletter-form">
+                <form id="signup" action="<?=$_SERVER['PHP_SELF']; ?>" method="get">
+                    <fieldset>
+                        <h1>Get Notified</h1>
+                        <p>About awesome stuff to come.</p>
+                            <span id="response">
+                                <? require_once('inc/store-address.php'); if($_GET['submit']){ echo storeAddress(); } ?>
+                            </span>
+                        <input type="text" name="email" id="email" placeholder="dirknowitzki@mavs.com" />
+                    </br>
+                        <button type="image" name="submit" value="Join" class="btn">Join</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>    
     </section>
     <!-- <section class="about-us">
     </section> -->
     <section class="site-footer">
         <div class="container">
-            <footer class="clearfix">
-                <div class="copyright">© Kending Project 2013</div>
-                <div class="social">
-                    <ul>
-                        <li><a class="ss-tumblr" href="http://kendingproject.tumblr.com/"></a></li>
-                        <li><a class="ss-instagram" href="http://instagram.com/kendingproject"></a></li>
-                        <li><a class="ss-facebook" href="https://www.facebook.com/kendingproject"></a></li>
-                        <li><a class="ss-twitter" href="https://twitter.com/kendingproject"></a></li>
-                    </ul>
-                </div>
-            </footer>     
+            <div class="container-inner">
+                <footer class="clearfix">
+                    <div class="copyright">© Kending Project 2013</div>
+                    <div class="social">
+                        <ul>
+                            <li><a class="ss-tumblr" href="http://kendingproject.tumblr.com/"></a></li>
+                            <li><a class="ss-instagram" href="http://instagram.com/kendingproject"></a></li>
+                            <li><a class="ss-facebook" href="https://www.facebook.com/kendingproject"></a></li>
+                            <li><a class="ss-twitter" href="https://twitter.com/kendingproject"></a></li>
+                        </ul>
+                    </div>
+                </footer>     
+            </div>
         </div>
     </section>
     <script type="text/javascript" src="js/libs/jquery-2.0.3.min.js"></script>
