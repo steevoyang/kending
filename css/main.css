@@ -180,13 +180,13 @@
     }
 
     h1, h2, h3 {
-        font-family: "freight-sans-pro", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+        font-family: "HelveticaNeue-CondensedBold", "freight-sans-pro", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
         font-size: 64px;
         font-weight: 700;
     }
 
     p, li {
-        font-family: "ff-tisa-web-pro", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
 
     form {
@@ -445,13 +445,60 @@ footer {
     transition: .25s all ease;
 }
 
-/* Form Styling */
-fieldset {margin:1em; padding:1em; border:1px solid #ccc; background:#eee;}
-legend {font:1.5em "Century Gothic",Helvetica,sans-serif; color:#000; border:1px solid #ccc; border-bottom:0; background:#eee; padding:.4em;}
-label {display:block; font:1.3em "Century Gothic",Helvetica,sans-serif; color:#333;}
-input {border:1px solid #999; padding:.4em; width:80%; font-size:1.4em;}
-.btn {border:0; padding:0; width:105px; margin-bottom:-.9em;}
+/* ======================== Newsletter Form Styling ======================== */
 
-#response {color:#f30; font-style:italic; font-size:inherit; padding:.4em;}
-#no-spam {font-size:1.1em; font-style:italic; color:#666; margin-top:.4em;}
-#description {font-size:1.1em; margin:1.5em 1em -1.9em 0; color:#333; text-align:right; color:#333;}
+fieldset {
+    margin: 1em;
+    padding: 1em;
+}
+
+legend {
+    font: 1.5em "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding:.4em;
+}
+
+input { 
+    position: relative;
+    padding: .4em;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 1.4em;
+    min-height: 40px;
+    background-color: #ffffff;
+    border: 2px solid #c8c8c8;
+    border-radius: 3px;
+    vertical-align: middle;
+}
+
+input:focus {
+    border: 2px solid #21AE98;;
+}
+
+.btn {
+    border: 0;
+    padding: 0;
+    width: 105px;
+    margin-bottom: -.9em;
+}
+
+#response {
+    color: #f30;
+    font-style: italic;
+    font-size: inherit;
+    padding: .4em;
+}
+
+#no-spam {
+    font-size: 1.1em;
+    font-style: italic;
+    color: #666;
+    margin-top: .4em;
+}
+
+#description {
+    font-size: 1.1em;
+    margin: 1.5em 1em -1.9em 0;
+    color:#333;
+    text-align:right;
+    color:#333;
+}

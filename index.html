@@ -11,7 +11,7 @@
     <section class="site-header">
         <a id="site-header">
         <h1>KENDING</h1>
-        <p>Taiwanese Food</p>
+        <p>Taiwanese Street Food</p>
         <img class="play-button" alt="Play" src="css/img/button.png">
         <button class="close-video">x</button>
         <iframe class="intro-video" src="http://player.vimeo.com/video/69515828?autoplay=1&amp;player_id=vimeoplayer&amp;api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
@@ -41,18 +41,14 @@
     <section class="newsletter">
         <a id="newsletter">
         <div class="container newsletter-form">
-            <p id="description">Monthly news and updates plus discounts on all our products.</p>
             <form id="signup" action="<?=$_SERVER['PHP_SELF']; ?>" method="get">
                 <fieldset>
                     <legend>Join Our Mailing List</legend>
-                    <label for="email" id="address-label">Email Address
                         <span id="response">
                             <? require_once('inc/store-address.php'); if($_GET['submit']){ echo storeAddress(); } ?>
                         </span>
-                    </label>
-                    <input type="text" name="email" id="email" />
+                    <input type="text" name="email" id="email" placeholder="dirknowitzki@mavs.com" />
                     <input type="image" src="css/img/join.jpg" name="submit" value="Join" class="btn" alt="Join" />
-                    <div id="no-spam">We'll never spam or give this address away</div>
                 </fieldset>
             </form>
         </div>  
