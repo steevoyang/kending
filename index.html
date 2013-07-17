@@ -2,65 +2,44 @@
 <head>
 	<meta charset="utf-8">
 	<title>Kending</title>
-    <link href="css/main.css" media="all" rel="stylesheet" type="text/css">
+    <link href="css/main.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="webfonts/ss-social-circle.css" rel="stylesheet" />
     <script type="text/javascript" src="//use.typekit.net/gaz6kdw.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
     <section class="site-header">
-        <!-- <div class="container"> -->
-            <h1>KENDING</h1>
-            <p>Taiwanese Food</p>
-            <img class="play-button" alt="Play" src="css/img/button.png">
-            <button class="close-video">x</button>
-            <iframe class="intro-video" src="http://player.vimeo.com/video/69515828?autoplay=1&amp;player_id=vimeoplayer&amp;api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-        <!-- </div> -->
+        <a id="site-header">
+        <h1>KENDING</h1>
+        <p>Taiwanese Food</p>
+        <img class="play-button" alt="Play" src="css/img/button.png">
+        <button class="close-video">x</button>
+        <iframe class="intro-video" src="http://player.vimeo.com/video/69515828?autoplay=1&amp;player_id=vimeoplayer&amp;api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
     </section>
     <section class="nav-bar">
         <nav class="container">
             <ul class="nav-items">
-                <li section="site-header" class="nav-link"><a href="#site-header">Home</a></li>
+                <li section="site-header" class="nav-link active"><a href="#site-header">Home</a></li>
                 <li section="main-content" class="nav-link"><a href="#main-content">The Food</a></li>
                 <li section="newsletter" class="nav-link"><a href="#newsletter">Newsletter</a></li>
-                <li section="about-us" class="nav-link"><a href="#about-us">About Us</a></li>
+                <!-- <li section="about-us" class="nav-link"><a href="#about-us">About Us</a></li> -->
             </ul>
         </nav>
     </section>
     <section class="main-content">
+        <a id="main-content">
         <div class="container">
             <div class="row">
                 <img alt="Renbing" src="css/img/burrito.jpg">
             </div>
             <div class="row">
                 <img alt="Popcorn Chicken" src="css/img/chicken.jpg">
+                <p>hello world</p>
             </div>
-            <!-- <div class="row clearfix">
-                <img class="one-half column" src="http://whitmans.vaesite.net/__data/097de330be2bf78b06d9697c948c4160.jpg" alt="food">
-                <div class="one-half column">
-                    <p>
-                        Have knowledge to share? Posting a Skillshare class is easy. You can create your very own local, in-person workshop or apply to teach a global, online class.
-                    </p>
-                </div>
-            </div>
-            <div class="row clearfix">
-                <img class="one-half column" src="http://whitmans.vaesite.net/__data/097de330be2bf78b06d9697c948c4160.jpg" alt="food">
-                <div class="one-half column">
-                    <p>
-                        Have knowledge to share? Posting a Skillshare class is easy. You can create your very own local, in-person workshop or apply to teach a global, online class.
-                    </p>
-                </div>
-            </div>
-            <div class="row clearfix">
-                <img class="one-half column" src="http://whitmans.vaesite.net/__data/097de330be2bf78b06d9697c948c4160.jpg" alt="food">
-                <div class="one-half column">
-                    <p>
-                        Have knowledge to share? Posting a Skillshare class is easy. You can create your very own local, in-person workshop or apply to teach a global, online class.
-                    </p>
-                </div>
-            </div> -->
         </div>
     </section>
-    <section class="site-footer">
+    <section class="newsletter">
+        <a id="newsletter">
         <div class="container newsletter-form">
             <p id="description">Monthly news and updates plus discounts on all our products.</p>
             <form id="signup" action="<?=$_SERVER['PHP_SELF']; ?>" method="get">
@@ -78,17 +57,25 @@
             </form>
         </div>  
     </section>
-    <section class="newsletter">
+    <!-- <section class="about-us">
+    </section> -->
+    <section class="site-footer">
         <div class="container">
-            <footer>
+            <footer class="clearfix">
                 <div class="copyright">© Kending Project 2013</div>
-                <div class="social"></div>
+                <div class="social">
+                    <ul>
+                        <li><a class="ss-tumblr" href="http://kendingproject.tumblr.com/"></a></li>
+                        <li><a class="ss-instagram" href="http://instagram.com/kendingproject"></a></li>
+                        <li><a class="ss-facebook" href="https://www.facebook.com/kendingproject"></a></li>
+                        <li><a class="ss-twitter" href="https://twitter.com/kendingproject"></a></li>
+                    </ul>
+                </div>
             </footer>     
         </div>
     </section>
     <script type="text/javascript" src="js/libs/jquery-2.0.3.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/plugins/jquery.anystretch.js"></script>
     <script type="text/javascript" src="js/plugins/mailing-list.js"></script>
 </body>
 </html>
