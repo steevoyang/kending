@@ -249,7 +249,7 @@ section {
 }
 
 section.site-header {
-    /*background: url('http://f.cl.ly/items/2N1W1F0F2P3T0i2c2k1n/Untitled-1.png') no-repeat top center fixed;*/
+    background: url('img/man-fishing.JPG') no-repeat top center fixed;
     text-align: center;
     margin-bottom: 0px;
 }
@@ -385,8 +385,22 @@ section.site-footer {
     background: url('img/man-fishing.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 550px;
+    position: relative;
+    z-index: -1001;
 }
 
+.newsletter-form {
+    position: fixed;
+    z-index: -1000;
+    top: 50%;
+    left: 50%;
+    margin-left: -470px;
+    margin-top: -91px;
+}
+
+footer {
+    z-index: -1001;
+}
 
 /* Form Styling */
 fieldset {margin:1em; padding:1em; border:1px solid #ccc; background:#eee;}

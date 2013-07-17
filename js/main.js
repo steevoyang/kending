@@ -1,11 +1,10 @@
 $(document).ready(function() {
  	var navbar = $('.nav-bar');
- 	var navbarOffset = navbar.offset().top;
- 	var minHeight = $(window).height() + 'px';
+ 	var minHeight; // minHeight is also the offset for the navbar
 
  	$(window).scroll(function () {
  		var navbarScrolltop = $(this).scrollTop();
- 		if (navbarScrolltop >= navbarOffset) {
+ 		if (navbarScrolltop >= minHeight) {
  			navbar.css({'position': 'fixed', 'top': 0});
  		}
  		else {
@@ -17,19 +16,20 @@ $(document).ready(function() {
 		var sectionName = $(this).attr('section');
 		var sectionElement = $('.'+sectionName);
 		var sectionOffset = sectionElement.offset().top;
-		$('html, body').animate({scrollTop: sectionOffset});
+		$('html, body').animate({scrollTop: sectionOffset}, 'slow');
 	});
 
-	function windowHeight() {
-		$('.site-header').css('min-height', minHeight);
+	function onResize() {
+		minHeight = $(window).height();
+		$('.site-header').css('min-height', minHeight + 'px');
 	}
 
-	windowHeight();
-	$(window).bind('resize', windowHeight);
+	onResize();
+	$(window).bind('resize', onResize);
 
 
 	// AnyStretch on Homepage background image
-	$(".site-header").anystretch("http://f.cl.ly/items/2N1W1F0F2P3T0i2c2k1n/Untitled-1.png");
+	// $(".site-header").anystretch("http://f.cl.ly/items/2N1W1F0F2P3T0i2c2k1n/Untitled-1.png");
 
 
 	// Settign variables for video
