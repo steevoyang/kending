@@ -1,81 +1,169 @@
-/* ======================== CSS Reset ======================== */
+/* ================================================
     
-    html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        font-size: 100%;
-        font: inherit;
-        vertical-align: baseline; }
-    article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-        display: block; }
-    body {
-        line-height: 1; }
-    ol, ul {
-        list-style: none; }
-    blockquote, q {
-        quotes: none; }
-    blockquote:before, blockquote:after,
-    q:before, q:after {
-        content: '';
-        content: none; }
-    table {
-        border-collapse: collapse;
-        border-spacing: 0;}
+    TABLE OF CONTENTS
 
-/* ======================== Base 960 Grid ======================== */
+    $RESET
+    $GRID
+    $ELEMENTS
+    $SECTIONS
+        $SITE-HEADER
+            $INTRO-VIDEO
+        $NAV-BAR
+        $MAIN-CONTENT
+        $NEWSLETTER
+        $SITE-FOOTER
 
-    .container {
-        position: relative;
-        width: 90%;
-        max-width: 960px;
-        margin: 0 auto;
-        padding: 0;
-    }
+    Author: Stephen Yang
+    Last Updated: 07/24/13
 
-    .container-inner {
-        width: 100%;
-    }
+================================================ */
 
-    .row {
-        margin-bottom: 20px;
-    }
 
-/* ======================== Basic Styles ======================== */
 
-    body {
-        background: #fff;
-        font-family: "ff-tisa-web-pro", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        color: #444;
-        -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
-        -webkit-text-size-adjust: 100%;
-    }
 
-    h1, h2, h3 {
-        font-family: "freight-sans-pro", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-        font-size: 4em;
-        font-weight: 700;
-    }
 
-    p, li {
-        font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    }
+/* ================================================
 
-/* ======================== Helpers ======================== */
+    $RESET
 
-    .clearfix:after {
-           content: " ";
-           visibility: hidden;
-           display: block;
-           height: 0;
-           clear: both;
-        }
+================================================ */
 
-/* ======================== Custom Styles ======================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, 
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, 
+img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, 
+i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, 
+caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, 
+embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, 
+section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, 
+nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+
+
+/* ================================================
+
+    $GRID
+
+    This is a fluid, percentage-based 3 column layout.
+
+================================================ */
+
+.container {
+    /*position: relative;*/
+    width: 90%;
+    max-width: 940px;
+    margin: auto;
+}
+
+.container .column {
+    margin: 0 1.04% 2.08% 1.04%;             /* 0 10px 20px 10px */
+    float: left;
+    display: block;
+}
+
+.container .one.column   { width: 100%;   }  /* 960px */
+.container .two.column   { width: 47.91%; }  /* 460px */
+.container .three.column { width: 31.25%; }  /* 300px */
+
+.row {
+    margin-bottom: 20px;
+}
+
+.row.omega {
+    margin-bottom: 0;
+}
+
+.clearfix:after {
+    content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+
+
+
+
+
+
+
+/* ================================================
+
+    $ELEMENTS
+
+================================================ */
+
+body {
+    background: #fff;
+    font-family: "ff-tisa-web-pro", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #444;
+    -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+    -webkit-text-size-adjust: 100%;
+}
+
+h1, h2, h3 {
+    font-family: "freight-sans-pro", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+    font-size: 4em;
+    font-weight: 700;
+}
+
+p, li {
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+
+
+
+/* ================================================
+
+    $SECTIONS
+
+================================================ */
 
 section {
     margin-bottom: 30px;
 }
+
+/* =============== $SITE-HEADER ================ */
 
 section.site-header {
     background: url('img/hero.jpg') no-repeat top center fixed;
@@ -83,6 +171,11 @@ section.site-header {
     text-align: center;
     margin-bottom: 0px;
     position: relative;
+}
+
+section.full-video .vimeoplayer {
+    width: 100%;
+    height: 630px;
 }
 
 .site-header h1, .site-header p {
@@ -155,13 +248,10 @@ button:hover {
     background: #00adef;
 }
 
-section.full-video .vimeoplayer {
-    width: 100%;
-    height: 630px;
-}
+/* ================= $NAV-BAR ================== */
 
 section.nav-bar {
-    height: 70px;
+    /*height: 70px;*/
     text-align: center;
     background-color: white;
     z-index: 100;
@@ -170,12 +260,16 @@ section.nav-bar {
     -webkit-box-shadow: 0 1px 1px rgba(6,8,8,0.1);
 }
 
+.nav-bar .column {
+    margin-bottom: 0;
+}
+
 .nav-bar ul li {
     list-style: none;
-    padding: 25px 50px;
+    padding: 2.60% 5.20%;
     display: inline-block;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.250em;
     cursor: pointer;
 }
 
@@ -209,6 +303,8 @@ section.nav-bar {
     color: #21AE98;
 }
 
+/* ============== $MAIN-CONTENT =============== */
+
 section.main-content {
     padding-top: 101px;
     padding-bottom: 30px;
@@ -217,12 +313,10 @@ section.main-content {
 }
 
 .main-content .container {
-    display: block;
     text-align: center;
 }
 
 .main-content img {
-    max-width: 100%;
     margin-bottom: 15px;
 }
 
@@ -230,12 +324,13 @@ section.main-content {
     margin-bottom: 50px;
 }
 
+/* =============== $NEWSLETTER ================ */
+
 section.newsletter {
     background: url('img/man-fishing.JPG') no-repeat center center fixed;
     background-size: 100% auto;
-    height: 830px;
-    position: relative;
-    margin-bottom: 0;
+    height: 500px;
+    /*position: relative;*/
 }
 
 .newsletter-form {
@@ -245,42 +340,6 @@ section.newsletter {
     margin-left: -379px;
     margin-top: -200px;
 }
-
-section.site-footer {
-    margin: 20px 0;
-}
-
-.copyright {
-    float: left;
-    z-index: -1001;
-    font-family: "HelveticaNeue", "freight-sans-pro", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-    font-size: 14px;
-    color: #777;
-    position: relative;
-    top: 50%;
-    margin-top: 8px;
-}
-
-.social ul li {
-    float: right;
-    display: inline-block;
-    margin-left: 15px;
-    font-size: 26px;
-    position: relative;
-    top: 4px;
-    text-decoration: none;
-    list-style: none;
-    color: #777;
-}
-
-.social ul li:hover {
-    color: #444 !important;
-    -webkit-transition: .25s all ease;
-    -moz-transition: .25s all ease;
-    transition: .25s all ease;
-}
-
-/* ======================== Newsletter Form Styling ======================== */
 
 fieldset {
     margin: 1em;
@@ -359,4 +418,46 @@ input:focus {
     color:#333;
     text-align:right;
     color:#333;
+}
+
+/* =============== $SITE-FOOTER ================ */
+
+section.site-footer {
+    margin: 20px 0;
+}
+
+.copyright {
+    float: left;
+    z-index: -1001;
+    font-family: "HelveticaNeue", "freight-sans-pro", "Myriad Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    color: #777;
+    position: relative;
+    top: 50%;
+    margin-top: 8px;
+}
+
+.social ul li {
+    float: right;
+    display: inline-block;
+    margin-left: 15px;
+    font-size: 26px;
+    position: relative;
+    top: 4px;
+    text-decoration: none;
+    list-style: none;
+    color: #777;
+}
+
+a:-webkit-any-link {
+    text-decoration: none;
+    list-style: none;
+    color: #777;   
+}
+
+a:-webkit-any-link:hover {
+    color: #444 !important;
+    -webkit-transition: .25s all ease;
+    -moz-transition: .25s all ease;
+    transition: .25s all ease;
 }
